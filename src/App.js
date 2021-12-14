@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
 // Import Components
 import Login from './components/Login';
+import Friendslist from './components/Friendslist';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         </header>
         <h2>Client Auth Project</h2>
         <Switch>
-          <Route path='/friendslist'/>
+          <Route path='/friendslist' component={Friendslist}/>
           <Route path='/login' component={Login}/>
         </Switch>
       </div>
