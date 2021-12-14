@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import Login from './components/Login';
 import Friendslist from './components/Friendslist';
 import AddFriend from './components/AddFriend';
+import Logout from './components/Logout';
 
 function App() {
   return (
@@ -16,13 +17,14 @@ function App() {
             <Link to='/login'>Login.</Link>
             <Link to='/friends'>Friends.</Link>
             <Link to='/friends/add'>Add friend.</Link>
-            <a href='#'>Logout.</a>
+            <Link to='/logout'>Logout.</Link>
           </nav>
         </header>
         <h2>Client Auth Project</h2>
         <Switch>
         <Route path='/friends/add' component={AddFriend}/>
           <Route path='/friends' component={Friendslist}/>
+          <Route path='/logout' component={Logout}/>
           <Route path='/login' component={Login}/>
         </Switch>
       </div>
