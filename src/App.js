@@ -7,6 +7,8 @@ import Login from './components/Login';
 import Friendslist from './components/Friendslist';
 import AddFriend from './components/AddFriend';
 import Logout from './components/Logout';
+import PrivateRoute from './components/PrivateRoute';
+import NoAuth from './components/NoAuth';
 
 function App() {
   return (
@@ -22,10 +24,11 @@ function App() {
         </header>
         <h2>Client Auth Project</h2>
         <Switch>
-        <Route path='/friends/add' component={AddFriend}/>
-          <Route path='/friends' component={Friendslist}/>
+          <PrivateRoute path='/friends/add' component={AddFriend}/>
+          <PrivateRoute path='/friends' component={Friendslist}/>
           <Route path='/logout' component={Logout}/>
           <Route path='/login' component={Login}/>
+          <Route path='/noauth' component={NoAuth}/>
         </Switch>
       </div>
   );
