@@ -12,16 +12,15 @@ function App() {
           <h3>Friends Database</h3>
           <nav>
             <Link to='/login'>Login.</Link>
-            <a href='#'>Friends.</a>
+            <Link to='/friendslist'>Friends.</Link>
             <a href='#'>Add friend.</a>
             <a href='#'>Logout.</a>
           </nav>
         </header>
         <h2>Client Auth Project</h2>
         <Switch>
-          <Route path='/login'>
-            <Login />
-          </Route>
+          <Route path='/friendslist'/>
+          <Route path='/login' component={Login}/>
         </Switch>
       </div>
   );
